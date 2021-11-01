@@ -76,7 +76,7 @@ DATA = [
 def run():
     # Comprehensions solutions
     
-    #                  ELEMENTO       | ITERACION            |CONDICION                                   
+    #                  ELEMENTO       | ITERACION        |CONDICION                                   
     all_python_devs = [worker["name"] for worker in DATA if worker["language"] == "python"]
     
     
@@ -84,11 +84,18 @@ def run():
     
     
     
-    
+    #                     ELEMENTO      |ITERACION          1CONDICION         
     all_Platzi_workers = [worker["name"] for worker in DATA if worker["organization"] == "Platzi"]
+   
+   
+   
+   #           ELEMENTO       |ITERABLE          |CONDICION
     adults =  [worker["name"] for worker in DATA if worker["age"] > 18]
+    
+    #            LISTA |MAP |FUNCION LAMBDA   
     old_people = list(map(lambda worker: worker | {"old": worker["age"] > 70}, DATA))
 
+    
     for worker in all_python_devs:
         print(worker)
 
